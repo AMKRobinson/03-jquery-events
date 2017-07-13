@@ -12,7 +12,7 @@ articleView.populateFilters = function() {
       //       Start by grabbing the author's name from an attribute in `this` article element,
       //       and then use that bit of text to create the option tag (in a variable named `optionTag`),
       //       that we can append to the #author-filter select element.
-      authorName = $(this).attr('data-author');
+      authorName = $(this).attr('data-attribute');
       optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
 
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
@@ -77,6 +77,7 @@ articleView.handleMainNav = function() {
   //       single .tab-content section that is associated with the clicked .tab element.
   //       So: You need to dynamically build a selector string with the correct ID, based on the
   //       data available to you on the .tab element that was clicked.
+  $('.main-nav')
 
 
   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
